@@ -1,0 +1,3 @@
+---
+epel_rpm_file_url: http://ftp-stud.hs-esslingen.de/pub/epel/6/x86_64
+epel_rpm_file_name: epel-release-6-8.noarch.rpm

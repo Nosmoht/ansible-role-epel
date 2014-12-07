@@ -1,0 +1,10 @@
+---
+- include_vars: '{{ ansible_os_family }}{{ ansible_distribution_major_version }}.yml'
+
+- name: Downloading EPEL rpm
+  get_url: dest={{ epel_rpm_download_dir }}/{{ epel_rpm_file_name }} url={{ epel_rpm_file_url }}/{{ epel_rpm_file_name }}
+  when: epel_rpm_file_url is defined and epel_rpm_file_name is defined
+
+- name: Install EPEL Repository
+  yum: name={{ epel_rpm_download_dir }}/{{ epel_rpm_file_name }} state=present
+  when: epel_rpm_download_dir is defined and epel_rpm_file_name is defined
