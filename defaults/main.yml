@@ -1,2 +1,3 @@
 ---
 epel_rpm_download_dir: /tmp
+epel_rpm_state: present
